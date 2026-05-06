@@ -13,10 +13,8 @@ authors:
       Faculty of Computing and Information Technology, Northern Border
       University, Arar, Kingdom of Saudi Arabia
     email: Marwa.amara@nbu.edu.sa
-identifiers:
-  - description: All-versions DOI on Zenodo
-    type: doi
-    value: 10.5281/zenodo.XXXXXXX
+# A Zenodo DOI will be added here once the v1.0.x release is archived
+# (see UPLOAD_GUIDE.md, Step 6).
 repository-code: 'https://github.com/marwaamara/iot-pm-mining-calibration'
 abstract: >-
   Python implementation of an AI-enhanced calibration pipeline for low-cost
