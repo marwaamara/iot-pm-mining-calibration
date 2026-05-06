@@ -1,7 +1,7 @@
 """
 Overfitting diagnostics for tree- and ANN-based calibrators.
 
-Produces three artefacts requested by Reviewer 2 (item 2):
+Produces three artefacts:
   (1) Learning curves: train vs validation RMSE as a function of training-set size
   (2) Train-test RMSE gap for each model
   (3) Time-series nested cross-validation error distribution (gives an honest

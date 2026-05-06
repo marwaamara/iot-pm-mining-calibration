@@ -1,5 +1,5 @@
 """
-MLR diagnostics for Reviewer 2 items 7 and 17:
+MLR diagnostics items 7 and 17:
     Replace plain R^2 with adjusted R^2; report partial correlation
     coefficients and Variance-Inflation Factors (VIF) for each predictor.
 

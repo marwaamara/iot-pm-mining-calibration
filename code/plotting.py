@@ -1,19 +1,14 @@
 """
-Publication-quality figure regeneration for the major revision.
+Publication-quality figures for the IoT PM sensor calibration pipeline.
 
-Addresses Reviewer 2 figure items 13-16, 24-26:
-    * Fig 3 split into 5 sub-panels, one per sensor (item 14)
-    * Identical x/y axis limits per 1:1 panel (item 15)
-    * Padded axis ranges above the data max (items 13, 24, 25)
-    * Co-location site description figure for the main text (item 26)
-    * Sensor / instrument photographs in the main text (item 26)
+Generates:
+    * Per-sensor scatter (one panel per simulated PMS5003 node)
+    * KAPSARC and Salt Lake Valley uncertainty decompositions
+    * Sensitivity-analysis bar chart
+    * Two-case-study schematic
+    * Salt Lake Valley raw scatter (real PMS5003 vs FEM)
 
-Plus new figures driven by Reviewer 1's GUM rewrite:
-    * Uncertainty Monte-Carlo distribution figure
-    * Sensitivity analysis figure (PMS5003 error-model perturbations)
-    * Salt Lake Valley calibration scatter (real-data validation)
-
-All figures are saved as 300 DPI PNGs into major_revision/curves/figures/.
+All figures are saved as 300 DPI PNGs into results/figures/.
 """
 
 from __future__ import annotations
@@ -312,7 +307,7 @@ def main():
     out = fig_slv_faceted()
     print(f"  -> {out.name}")
 
-    # Co-location schematic (R2 item 26)
+    # Co-location schematic
     out = fig_colocation_schematic()
     print(f"  -> {out.name}")
 

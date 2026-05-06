@@ -1,17 +1,15 @@
 """
-Sensitivity analysis on the assumed PMS5003 error-model parameters
-(Reviewer 1 — synthetic-data limitation).
+Sensitivity analysis on the assumed PMS5003 error-model parameters.
 
 For each KAPSARC simulation parameter (gain drift, T coefficient, RH
-coefficient, dust-composition factor, noise std), perturb by +/- 20 %, regenerate
-the sensor data, retrain the headline calibration models, and report the
-resulting RMSE / U.  A flat sensitivity profile demonstrates that the
-calibration methodology generalises beyond the specific assumed parameter
-values, which addresses Reviewer 1's main concern that "the synthetic sensor
-error model limits the applicability of the uncertainty evaluation".
+coefficient, dust-composition factor, noise std), perturb by +/- 20 %,
+regenerate the sensor data, retrain the headline calibration models,
+and report the resulting RMSE / U. A flat sensitivity profile
+demonstrates that the calibration methodology generalises beyond the
+specific assumed parameter values.
 
-We use one-at-a-time (OAT) perturbation; for full Sobol indices a second
-study would be required, which we cite as future work in the paper.
+We use one-at-a-time (OAT) perturbation; full Sobol indices are left
+for future work.
 """
 
 from __future__ import annotations

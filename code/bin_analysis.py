@@ -1,5 +1,5 @@
 """
-Concentration-bin error analysis (Reviewer 2 item 18).
+Concentration-bin error analysis.
 
 The submitted manuscript reports negative R^2 in some concentration bins, which
 R2 reads as overfitting. The likely actual cause is the well-known

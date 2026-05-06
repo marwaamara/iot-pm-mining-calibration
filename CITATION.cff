@@ -1,10 +1,11 @@
 cff-version: 1.2.0
 title: >-
-  Reproducibility code for AI-enhanced calibration of IoT particulate matter
-  sensors in open-pit mining
+  IoT PM mining calibration: a Python pipeline for low-cost particulate-matter
+  sensor calibration with a JCGM-101 uncertainty budget
 message: >-
-  If you use this software, please cite both this code and the underlying
-  manuscript (see "preferred-citation" below).
+  If you use this software in your work, please contact the author for
+  citation guidance until the corresponding peer-reviewed article is
+  published.
 type: software
 authors:
   - given-names: Marwa
@@ -19,13 +20,13 @@ identifiers:
     value: 10.5281/zenodo.20049521
 repository-code: 'https://github.com/marwaamara/iot-pm-mining-calibration'
 abstract: >-
-  Python implementation of an AI-enhanced calibration pipeline for low-cost
-  IoT particulate matter sensors (Plantower PMS5003 class) deployed in
-  open-pit mining environments, including a JCGM-101-compliant uncertainty
-  budget combining out-of-fold residuals, Monte-Carlo input propagation,
-  and bias correction. Validated on the KAPSARC Riyadh reference dataset
-  (semi-synthetic) and the Kelly et al. 2023 Salt Lake Valley dust-event
-  dataset (real co-located PMS5003 + FEM measurements).
+  Python implementation of a calibration pipeline for low-cost IoT
+  particulate-matter sensors (Plantower PMS5003 class). Includes a
+  JCGM-101-compliant uncertainty budget combining out-of-fold residuals,
+  Monte-Carlo input propagation, and bias correction. Demonstrated on
+  two datasets: a semi-synthetic case using the KAPSARC Riyadh
+  reference data and a real-data case using the Kelly et al. 2023
+  Salt Lake Valley dust-event dataset.
 keywords:
   - particulate matter
   - low-cost sensor calibration
@@ -33,21 +34,5 @@ keywords:
   - JCGM 101
   - Monte Carlo
   - machine learning
-  - open-pit mining
   - PMS5003
 license: MIT
-preferred-citation:
-  type: article
-  authors:
-    - given-names: Marwa
-      family-names: Amara
-      affiliation: Northern Border University
-  title: >-
-    AI-enhanced calibration of IoT particulate matter sensors in
-    open-pit mining: a metrological approach to environmental
-    cross-sensitivity compensation
-  journal: Measurement
-  publisher:
-    name: Elsevier
-  year: 2026
-  notes: 'Manuscript MEAS-D-26-03768, under review (major revision).'

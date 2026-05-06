@@ -1,48 +1,48 @@
 """
 GUM-compliant uncertainty pipeline for ML-calibrated low-cost PM sensors.
 
-This module replaces the original Section 4.3 uncertainty framework, which
-Reviewer 1 correctly identified as not GUM-compliant. The new framework
-addresses each of R1's four equation-level critiques:
+The framework combines four steps so that the result is consistent with
+GUM (JCGM 100:2008) and its Monte-Carlo supplement (JCGM 101:2008):
 
-  R1 critique on Eq. (9) — Type A from test residuals violates GUM 4.2.1
-    -> Replaced by out-of-fold (OOF) residuals from time-series k-fold CV.
-       Each OOF residual is a prediction on a sample unseen by the model
-       that produced it; the residual sequence is therefore a set of
-       independent observations of the *calibration error*, satisfying
-       GUM 4.2 / JCGM 100 §F.2 in the validation-uncertainty sense
-       (cf. Pernot & Cailliez, J. Chemom. 31, 2017, e2966; ISO 6143).
+  Step 1 -- Bias correction
+    A bias correction term b_hat is estimated on validation folds and
+    applied to predictions. Any residual bias on the held-out test set
+    is reported as a Type B rectangular component (b/sqrt(3)) per
+    GUM 6.3.1.
 
-  R1 critique on Eq. (10) — u_B is on the *input* (reference), not output
-    -> Reference-instrument uncertainty enters via the residual: the
-       observed residual variance is decomposed as
-           Var(r) = Var(model error) + u_ref^2
-       and we recover the model-error variance by subtraction:
-           u_A^model = sqrt(max(0, var(r_OOF) - u_ref^2))
-       This treats u_ref correctly per GUM 5.1 (input-quantity uncertainty).
+  Step 2 -- Type A from out-of-fold residuals
+    Type A standard uncertainty is obtained from out-of-fold (OOF)
+    residuals of a time-series k-fold cross-validation. Each OOF
+    residual is a prediction on a sample unseen by the model that
+    produced it; the residual sequence is therefore a set of
+    independent observations of the *calibration error*, satisfying
+    GUM 4.2 / JCGM 100 §F.2 in the validation-uncertainty sense
+    (cf. Pernot & Cailliez, J. Chemom. 31, 2017, e2966; ISO 6143).
 
-  R1 critique on Eq. (11) — Type A and Type B were correlated
-    -> After the variance-subtraction step above, the model-error and
-       reference-error components are statistically decorrelated by
-       construction. The Monte-Carlo input-propagation component
-       (sensor noise + T noise + RH noise propagated through the trained
-       ML model) is independent of model-fit residuals (different physical
-       sources). The combined uncertainty is therefore a sum of three
-       independent components:
-           u_c^2 = u_A^model^2 + u_input,MC^2 + (b/sqrt(3))^2
+  Step 3 -- Reference-instrument uncertainty as an input
+    Reference-instrument uncertainty enters via the residual variance
+    decomposition
+        Var(r) = Var(model error) + u_ref^2
+    and the model-error variance is recovered by subtraction:
+        u_A^model = sqrt(max(0, var(r_OOF) - u_ref^2))
+    This treats u_ref correctly per GUM 5.1 (input-quantity uncertainty).
 
-  R1 critique on Eq. (13) — bias not used to correct
-    -> A bias correction term b_hat is estimated on validation folds and
-       applied to predictions. Any residual bias on the held-out test set
-       is reported as a Type B rectangular component (b/sqrt(3)) per
-       GUM 6.3.1.
+  Step 4 -- Combined uncertainty
+    After the variance-subtraction step, the model-error and
+    reference-error components are decorrelated by construction. The
+    Monte-Carlo input-propagation component (sensor noise + T noise +
+    RH noise propagated through the trained ML model) is independent
+    of the model-fit residuals (different physical sources). The
+    combined uncertainty is therefore a sum of three independent
+    components:
+        u_c^2 = u_A^model^2 + u_input,MC^2 + (b/sqrt(3))^2
 
 References:
-  GUM (JCGM 100:2008)            — input-quantity uncertainty propagation
-  JCGM 101:2008                  — Monte-Carlo supplement to GUM
-  ISO 6143                       — calibration-validation uncertainty
-  Pernot, Cailliez 2017          — ML calibration uncertainty treatment
-  Beirlant et al., NIST/SEMATECH — variance subtraction for noisy targets
+  GUM (JCGM 100:2008)            -- input-quantity uncertainty propagation
+  JCGM 101:2008                  -- Monte-Carlo supplement to GUM
+  ISO 6143                       -- calibration-validation uncertainty
+  Pernot, Cailliez 2017          -- ML calibration uncertainty treatment
+  Beirlant et al., NIST/SEMATECH -- variance subtraction for noisy targets
 """
 
 from __future__ import annotations

@@ -1,5 +1,5 @@
 """
-Hyperparameter validation curves for tree-based calibrators (Reviewer 2 item 21).
+Hyperparameter validation curves for tree-based calibrators.
 
 Justifies the chosen hyperparameters (n_estimators / B = 200, max_depth) by
 sweeping each one and plotting validation RMSE. The chosen value should sit on

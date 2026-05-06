@@ -1,20 +1,19 @@
 """
-Major-revision experimental runner.
+Main experimental runner.
 
-Re-runs all calibration models on TWO datasets:
-    * KAPSARC Riyadh + simulated PMS5003   (semi-synthetic, primary, PM2.5)
-    * Kelly et al. 2023 Salt Lake Valley   (real co-located, secondary, PM10)
+Runs all calibration models on TWO datasets:
+    * KAPSARC Riyadh + simulated PMS5003   (semi-synthetic case, PM2.5)
+    * Kelly et al. 2023 Salt Lake Valley   (real co-located case, PM10)
 
 For each (dataset, model) pair, this driver computes the GUM/JCGM-101
-uncertainty budget defined in `uncertainty.py`, which addresses every
-equation-level critique of Reviewer 1.
+uncertainty budget defined in `uncertainty.py`.
 
-Outputs (under major_revision/{tables,curves}):
+Outputs (under results/{tables,figures}):
     * tables/calibration_results_kapsarc.csv     (PM2.5)
     * tables/calibration_results_slv.csv         (PM10, Salt Lake Valley)
     * tables/uncertainty_budget_full.csv         (long-format components)
     * tables/uncertainty_budget_full.tex         (LaTeX, both datasets)
-    * curves/oof_residuals_<model>.csv           (per-sample OOF residuals)
+    * figures/oof_residuals_<model>.csv          (per-sample OOF residuals)
 """
 
 from __future__ import annotations
@@ -145,12 +144,11 @@ def model_factory(name: str):
 
 
 MODELS = ["Affine", "MLR", "RF", "GBR", "ANN"]
-# CNN is dropped from the revision: in the submitted paper R^2 = -0.008,
-# which Reviewer 2 (item 18) flagged. The 1D-CNN architecture in the code
-# requires sequential alignment that doesn't survive temporal CV folds without
-# leakage; including it would either be unfair (no fold isolation) or unstable
-# (re-running with sequence padding). We document its exclusion in the
-# Response to Reviewers and discuss it as a model-design limitation.
+# CNN is intentionally excluded: the 1D-CNN architecture requires
+# sequential alignment that does not survive temporal CV folds without
+# data leakage. Including it would be either unfair (no fold isolation)
+# or unstable (re-running with sequence padding). We treat the exclusion
+# as a model-design limitation.
 
 
 def make_callbacks(name):

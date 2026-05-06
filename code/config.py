@@ -1,12 +1,6 @@
 """
 Configuration constants for the IoT PM sensor calibration experiment.
 
-Companion code for:
-    Amara, M. (2026). AI-enhanced calibration of IoT particulate matter
-    sensors in open-pit mining: a metrological approach to environmental
-    cross-sensitivity compensation. Measurement (under review,
-    MEAS-D-26-03768).
-
 All paths are relative to the repository root, so the code runs unchanged
 on any machine after `git clone`.
 """
