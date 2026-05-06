@@ -1,0 +1,25 @@
+% GUM/JCGM-101 uncertainty budget — full revision pipeline
+\begin{tabular}{lllrrrrrrrrr}
+\toprule
+dataset & split & model & RMSE & R2 & MBE_test & u_A_model & u_input_MC & u_B_bias & u_c & U & coverage_actual \\
+\midrule
+KAPSARC & temporal & Uncalibrated & 24.97 & 0.65 & -0.27 & 24.97 & 0.00 & 0.00 & 24.97 & 49.95 & 95.14 \\
+KAPSARC & temporal & Affine & 24.85 & 0.65 & -9.61 & 22.64 & 5.20 & 5.55 & 23.88 & 47.76 & 92.78 \\
+KAPSARC & temporal & MLR & 16.85 & 0.84 & 0.12 & 15.46 & 5.92 & 0.07 & 16.56 & 33.12 & 95.20 \\
+KAPSARC & temporal & RF & 10.79 & 0.93 & -4.11 & 8.63 & 5.83 & 2.37 & 10.68 & 21.36 & 95.56 \\
+KAPSARC & temporal & GBR & 9.99 & 0.94 & -2.37 & 8.60 & 5.91 & 1.37 & 10.52 & 21.05 & 96.61 \\
+KAPSARC & temporal & ANN & 9.41 & 0.95 & -0.77 & 7.88 & 6.09 & 0.44 & 9.97 & 19.94 & 97.18 \\
+SaltLakeValley & random & Uncalibrated & 29.47 & -0.30 & -18.57 & 22.97 & 0.00 & 0.00 & 22.97 & 45.94 & 92.03 \\
+SaltLakeValley & NaN & Affine & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+SaltLakeValley & NaN & MLR & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+SaltLakeValley & NaN & RF & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+SaltLakeValley & NaN & GBR & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+SaltLakeValley & NaN & ANN & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN & NaN \\
+SaltLakeValley & temporal & Uncalibrated & 22.66 & -0.59 & -15.84 & 16.27 & 0.00 & 0.00 & 16.27 & 32.53 & 89.93 \\
+SaltLakeValley & temporal & Affine & 24.41 & -0.84 & 16.61 & 28.93 & 3.44 & 9.59 & 30.67 & 61.34 & 97.12 \\
+SaltLakeValley & temporal & MLR & 26.72 & -1.21 & 22.28 & 24.21 & 3.69 & 12.87 & 27.67 & 55.34 & 97.84 \\
+SaltLakeValley & temporal & RF & 15.37 & 0.27 & 5.10 & 23.94 & 3.14 & 2.94 & 24.32 & 48.64 & 98.56 \\
+SaltLakeValley & temporal & GBR & 14.49 & 0.35 & 2.82 & 23.16 & 3.19 & 1.63 & 23.44 & 46.88 & 99.28 \\
+SaltLakeValley & temporal & ANN & 16.93 & 0.11 & 10.52 & 25.05 & 2.22 & 6.07 & 25.87 & 51.74 & 99.28 \\
+\bottomrule
+\end{tabular}

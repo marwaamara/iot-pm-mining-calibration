@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+title: >-
+  Reproducibility code for AI-enhanced calibration of IoT particulate matter
+  sensors in open-pit mining
+message: >-
+  If you use this software, please cite both this code and the underlying
+  manuscript (see "preferred-citation" below).
+type: software
+authors:
+  - given-names: Marwa
+    family-names: Amara
+    affiliation: >-
+      Faculty of Computing and Information Technology, Northern Border
+      University, Arar, Kingdom of Saudi Arabia
+    email: Marwa.amara@nbu.edu.sa
+identifiers:
+  - description: All-versions DOI on Zenodo
+    type: doi
+    value: 10.5281/zenodo.XXXXXXX
+repository-code: 'https://github.com/<your-username>/iot-pm-mining-calibration'
+abstract: >-
+  Python implementation of an AI-enhanced calibration pipeline for low-cost
+  IoT particulate matter sensors (Plantower PMS5003 class) deployed in
+  open-pit mining environments, including a JCGM-101-compliant uncertainty
+  budget combining out-of-fold residuals, Monte-Carlo input propagation,
+  and bias correction. Validated on the KAPSARC Riyadh reference dataset
+  (semi-synthetic) and the Kelly et al. 2023 Salt Lake Valley dust-event
+  dataset (real co-located PMS5003 + FEM measurements).
+keywords:
+  - particulate matter
+  - low-cost sensor calibration
+  - measurement uncertainty
+  - JCGM 101
+  - Monte Carlo
+  - machine learning
+  - open-pit mining
+  - PMS5003
+license: MIT
+preferred-citation:
+  type: article
+  authors:
+    - given-names: Marwa
+      family-names: Amara
+      affiliation: Northern Border University
+  title: >-
+    AI-enhanced calibration of IoT particulate matter sensors in
+    open-pit mining: a metrological approach to environmental
+    cross-sensitivity compensation
+  journal: Measurement
+  publisher:
+    name: Elsevier
+  year: 2026
+  notes: 'Manuscript MEAS-D-26-03768, under review (major revision).'

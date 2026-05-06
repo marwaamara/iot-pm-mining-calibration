@@ -1,0 +1,7 @@
+dataset,pm,model,split,n_seeds,n_train,n_test,RMSE,MAE,R2,MBE_test,u_A_model,u_input_MC,u_B_bias,u_c,U,raw_oof_std,bias_correction,coverage_actual,coverage_target,k_empirical,fit_seconds
+SaltLakeValley,pm10,Uncalibrated,temporal,1,554,139,22.66,15.89,-0.5871,-15.84,16.27,0.0,0.0,16.27,32.53,16.27,0.0,0.8993000000000001,0.95,,0.0
+SaltLakeValley,pm10,Affine,temporal,1,554,139,24.41,18.99,-0.8418,16.61,28.93,3.444,9.59,30.672,61.344,29.012,-0.166,0.9712,0.95,1.648,0.0
+SaltLakeValley,pm10,MLR,temporal,1,554,139,26.72,23.47,-1.2065,22.28,24.215,3.689,12.866,27.668,55.335,24.313,-0.644,0.9784,0.95,1.667,0.0
+SaltLakeValley,pm10,RF,temporal,1,554,139,15.37,10.83,0.2697,5.1,23.938,3.136,2.944,24.322,48.644,24.037,2.351,0.9856,0.95,1.297,2.2
+SaltLakeValley,pm10,GBR,temporal,1,554,139,14.49,10.08,0.351,2.82,23.163,3.192,1.63,23.438,46.876,23.265,2.94,0.9928,0.95,1.342,1.6
+SaltLakeValley,pm10,ANN,temporal,3,554,139,16.93,14.46,0.1138,10.52,25.049,2.22,6.071,25.87,51.739,25.143,-4.454,0.9928,0.95,1.026,92.2

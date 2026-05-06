@@ -1,0 +1,2 @@
+dataset,feature,R2_train,AdjR2_train,R2_test,AdjR2_test,n_train,n_test,p
+kapsarc,_summary,0.8651464291080142,0.8651038123680294,0.838904457133625,0.8387006247301669,18993,4749,6
