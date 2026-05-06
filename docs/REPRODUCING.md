@@ -21,7 +21,7 @@ Optional but recommended:
 ## 1. Clone and install
 
 ```bash
-git clone https://github.com/<your-username>/iot-pm-mining-calibration.git
+git clone https://github.com/marwaamara/iot-pm-mining-calibration.git
 cd iot-pm-mining-calibration
 pip install -r requirements.txt
 ```

@@ -116,11 +116,11 @@ git add .
 git status                    # quick sanity check; you should see ~30 files staged
 git commit -m "Initial release: reproducibility package for MEAS-D-26-03768"
 git branch -M main
-git remote add origin https://github.com/<your-username>/iot-pm-mining-calibration.git
+git remote add origin https://github.com/marwaamara/iot-pm-mining-calibration.git
 git push -u origin main
 ```
 
-Replace `<your-username>` with the GitHub username you chose in Step 1.
+Replace `marwaamara` with the GitHub username you chose in Step 1.
 
 The first `git push` will prompt for authentication. **Use a Personal
 Access Token, not your password** (GitHub disabled password auth in 2021):
@@ -228,11 +228,11 @@ dataset is from \textit{The Hive} repository (CC BY 3.0,
 \url{https://doi.org/10.7278/S50d-xbns-3ge3}). The calibration code,
 GUM/JCGM-101 uncertainty pipeline, sensitivity-analysis script and all
 figure-generation scripts are open-source under the MIT licence at
-\url{https://github.com/<your-username>/iot-pm-mining-calibration}
+\url{https://github.com/marwaamara/iot-pm-mining-calibration}
 and archived on Zenodo at \url{https://doi.org/10.5281/zenodo.XXXXXXX}.
 ```
 
-Replace **both** `<your-username>` and `XXXXXXX` with the real values.
+Replace **both** `marwaamara` and `XXXXXXX` with the real values.
 
 Also update `CITATION.cff` in the repo root with the real DOI:
 
@@ -265,7 +265,7 @@ working in:
 ```bash
 # In a fresh terminal, somewhere outside this project
 cd /tmp
-git clone https://github.com/<your-username>/iot-pm-mining-calibration.git smoke
+git clone https://github.com/marwaamara/iot-pm-mining-calibration.git smoke
 cd smoke
 python -m venv .venv
 .venv\Scripts\activate           # (or `source .venv/bin/activate` on Linux)

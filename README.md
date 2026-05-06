@@ -48,7 +48,7 @@ verifiable by anyone with a laptop and an hour of free time.
 ## Quick start (3 commands)
 
 ```bash
-git clone https://github.com/<your-username>/iot-pm-mining-calibration.git
+git clone https://github.com/marwaamara/iot-pm-mining-calibration.git
 cd iot-pm-mining-calibration
 pip install -r requirements.txt
 
@@ -179,7 +179,7 @@ the manuscript and the code:
   title   = {Reproducibility code for AI-enhanced calibration of IoT
              particulate matter sensors in open-pit mining},
   year    = {2026},
-  url     = {https://github.com/<your-username>/iot-pm-mining-calibration},
+  url     = {https://github.com/marwaamara/iot-pm-mining-calibration},
   doi     = {10.5281/zenodo.XXXXXXX}
 }
 ```

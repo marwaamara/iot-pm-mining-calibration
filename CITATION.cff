@@ -17,7 +17,7 @@ identifiers:
   - description: All-versions DOI on Zenodo
     type: doi
     value: 10.5281/zenodo.XXXXXXX
-repository-code: 'https://github.com/<your-username>/iot-pm-mining-calibration'
+repository-code: 'https://github.com/marwaamara/iot-pm-mining-calibration'
 abstract: >-
   Python implementation of an AI-enhanced calibration pipeline for low-cost
   IoT particulate matter sensors (Plantower PMS5003 class) deployed in
