@@ -17,7 +17,7 @@ authors:
 identifiers:
   - description: All-versions DOI on Zenodo
     type: doi
-    value: 10.5281/zenodo.20049521
+    value: 10.5281/zenodo.20049520
 repository-code: 'https://github.com/marwaamara/iot-pm-mining-calibration'
 abstract: >-
   Python implementation of a calibration pipeline for low-cost IoT
