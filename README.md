@@ -85,6 +85,6 @@ Valley) on a recent laptop CPU. No GPU required.
 
 ## Contact
 
-Dr Marwa Amara — Faculty of Computing and Information Technology,
+Dr Marwa Amara — Department of Computer Sciences, College of Sciences,
 Northern Border University, Arar 91431, Kingdom of Saudi Arabia —
 [Marwa.amara@nbu.edu.sa](mailto:Marwa.amara@nbu.edu.sa)
