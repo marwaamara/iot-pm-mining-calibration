@@ -15,9 +15,9 @@ authors:
       University, Arar, Kingdom of Saudi Arabia
     email: Marwa.amara@nbu.edu.sa
 identifiers:
-  - description: All-versions DOI on Zenodo
+  - description: Zenodo DOI for v1.1.0
     type: doi
-    value: 10.5281/zenodo.20049520
+    value: 10.5281/zenodo.20049832
 repository-code: 'https://github.com/marwaamara/iot-pm-mining-calibration'
 abstract: >-
   Python implementation of a calibration pipeline for low-cost IoT
