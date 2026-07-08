@@ -1,5 +1,6 @@
 # IoT PM mining calibration
 
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.measurement.2026.122421-blue.svg)](https://doi.org/10.1016/j.measurement.2026.122421)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org)
 [![Data: CC0 / CC BY](https://img.shields.io/badge/Data-CC0%20%7C%20CC%20BY-orange.svg)](data/)
@@ -8,11 +9,30 @@ Open-source Python pipeline for the calibration of low-cost IoT
 particulate-matter (PM) sensors against a reference instrument, with a
 JCGM-101-compliant uncertainty budget.
 
-The full description of the methodology and the corresponding
-peer-reviewed publication will be linked here once the article is
-published. Until then, this repository is provided as a reproducibility
-artefact only; please contact the author for citation guidance if you
-plan to use the code in your own work.
+This repository is the reproducibility artefact for the following
+peer-reviewed article in *Measurement* (Elsevier):
+
+> Amara, M. *AI-enhanced calibration of IoT particulate matter sensors in
+> open-pit mining: a metrological approach to environmental cross-sensitivity
+> compensation.* Measurement, 2026, Article 122421.
+> <https://doi.org/10.1016/j.measurement.2026.122421>
+
+## Citation
+
+If you use this code or data, please cite the article:
+
+```bibtex
+@article{Amara2026,
+  title   = {AI-enhanced calibration of IoT particulate matter sensors in open-pit mining: a metrological approach to environmental cross-sensitivity compensation},
+  author  = {Amara, Marwa},
+  journal = {Measurement},
+  year    = {2026},
+  pages   = {122421},
+  doi     = {10.1016/j.measurement.2026.122421},
+  issn    = {0263-2241},
+  publisher = {Elsevier}
+}
+```
 
 ---
 

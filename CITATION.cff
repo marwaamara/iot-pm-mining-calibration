@@ -3,9 +3,8 @@ title: >-
   IoT PM mining calibration: a Python pipeline for low-cost particulate-matter
   sensor calibration with a JCGM-101 uncertainty budget
 message: >-
-  If you use this software in your work, please contact the author for
-  citation guidance until the corresponding peer-reviewed article is
-  published.
+  If you use this software, please cite the associated article (see
+  preferred-citation).
 type: software
 authors:
   - given-names: Marwa
@@ -36,3 +35,19 @@ keywords:
   - machine learning
   - PMS5003
 license: MIT
+preferred-citation:
+  type: article
+  title: >-
+    AI-enhanced calibration of IoT particulate matter sensors in open-pit
+    mining: a metrological approach to environmental cross-sensitivity
+    compensation
+  authors:
+    - given-names: Marwa
+      family-names: Amara
+  journal: Measurement
+  publisher:
+    name: Elsevier
+  year: 2026
+  issn: 0263-2241
+  doi: 10.1016/j.measurement.2026.122421
+  start: 122421
